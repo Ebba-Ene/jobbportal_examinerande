@@ -20,8 +20,6 @@ export const getStoryblokApi = storyblokInit({
 		header: Header,
 		footer: Footer,
 		hero: Hero,
-		toolbar: Toolbar,
-		"seach-bar": SearchBar
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
