@@ -6,8 +6,6 @@ import NavLink from '@/components/NavLink';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
-import Toolbar from '@/components/Toolbar';
-import SearchBar from '@/components/SearchBar';
 
 export const getStoryblokApi = storyblokInit({
 	accessToken: process.env.STORYBLOK_DELIVERY_API_TOKEN,
