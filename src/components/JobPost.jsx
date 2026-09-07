@@ -7,45 +7,6 @@ export default function JobPost({ blok }) {
 
   return (
     <article className="max-w-5xl mx-auto px-6 py-16" {...storyblokEditable(blok)}>
-      <style>{`
-        .blog-post {
-          max-width: 800px;
-          margin: 40px auto;
-        }
-
-        .blog-post img {
-          width: 100%;
-          max-height: 400px;
-          object-fit: cover;
-          border-radius: 8px;
-          margin: 20px 0;
-        }
-
-        .blog-post h1 {
-          margin: 10px 0;
-          font-size: 36px;
-        }
-
-        .blog-post .date {
-          color: #888;
-          font-size: 14px;
-        }
-
-        .blog-post .summary {
-          font-size: 18px;
-          color: #555;
-          margin: 20px 0;
-        }
-
-        .blog-post .author {
-          font-size: 14px;
-          margin-bottom: 30px;
-        }
-
-        .blog-post a {
-          color: #333;
-        }
-      `}</style>
 
       <p>
         <Link href="/jobs"
