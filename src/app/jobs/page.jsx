@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { StoryblokServerComponent, StoryblokStory } from "@storyblok/react/rsc";
+import { StoryblokServerComponent } from "@storyblok/react/rsc";
 import { getStoryblokApi } from "@/lib/storyblok";
 
 export default async function JobsPage({searchParams}) {
