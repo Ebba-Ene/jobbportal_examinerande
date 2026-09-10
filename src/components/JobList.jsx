@@ -11,10 +11,10 @@ export default async function JobList({ blok, query = "", department="" }) {
     content_type: "job-post",
     sort_by: "content.publishedDate:desc",
     ...(query && {
-         "filter_query[title][like]": `*${query}*`
+         search_term: query
         }),
     ...(department && {
-          "filter_query[department][in]": department
+          filter_query: {department: { in: department }}
         })
   });
 
