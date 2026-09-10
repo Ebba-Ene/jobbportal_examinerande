@@ -1,19 +1,25 @@
 import { notFound } from "next/navigation";
-import { StoryblokStory } from "@storyblok/react/rsc";
+import { StoryblokServerComponent, StoryblokStory } from "@storyblok/react/rsc";
 import { getStoryblokApi } from "@/lib/storyblok";
 
-export default async function JobsPage() {
-	let story;
-
+export default async function JobsPage({searchParams}) {
 	try {
-		const storyblokApi = getStoryblokApi();
-		const { data } = await storyblokApi.get("cdn/stories/jobs", {
-			version: "draft",
-		});
-		story = data.story;
+    const params = await searchParams;
+    const query = params.q ?? "";
+    const department = params.department ?? "";
+
+		const storyblokApi = getStoryblokApi()
+
+		const {data} = await storyblokApi.get("cdn/stories/jobs", {
+			version: "draft"
+		})
+
+		return <StoryblokServerComponent
+			blok={data.story.content}
+			query={query}
+			department={department}
+		/>;
 	} catch {
 		notFound();
 	}
-
-	return <StoryblokStory story={story} />;
 }

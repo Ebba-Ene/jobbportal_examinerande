@@ -20,7 +20,7 @@ export default function JobPost({ blok }) {
 
       <div>
         {blok.department && (
-          <p className="text-sm text-gray-500 mb-1">
+          <p className="text-sm text-gray-500 mb-1 uppercase">
             {blok.department}
           </p>
         )}
